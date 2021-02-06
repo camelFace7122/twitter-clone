@@ -1,0 +1,176 @@
+{
+  "tweets": [
+    {
+      "_id": "6019aac60ff40841a741a7d2",
+      "text": "Exercitation exercitation ea voluptate deserunt sit in enim laborum velit.",
+      "mediaImg": "https://source.unsplash.com/random?10",
+      "mediaTag": "HILL SHERMAN",
+      "commentsCount": 35,
+      "retweetsCount": 3507,
+      "likeCount": 4067,
+      "user": {
+        "fullname": "Diane Salinas",
+        "username": "jenifer",
+        "avatarUrl": "https://source.unsplash.com/random?4",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac64e392f69ae8d0795",
+      "text": "Nostrud pariatur tempor voluptate elit ad irure deserunt amet ullamco elit id commodo non sit.",
+      "mediaImg": "https://source.unsplash.com/random?9",
+      "mediaTag": "BONITA COPELAND",
+      "commentsCount": 31,
+      "retweetsCount": 4730,
+      "likeCount": 3888,
+      "user": {
+        "fullname": "Gould Mclean",
+        "username": "moran",
+        "avatarUrl": "https://source.unsplash.com/random?2",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac63ad981265d3e7f96",
+      "text": "Laboris aliqua nisi mollit ipsum labore elit voluptate anim laborum enim velit incididunt dolore.",
+      "mediaImg": "https://source.unsplash.com/random?8",
+      "mediaTag": "KATHERINE FOLEY",
+      "commentsCount": 27,
+      "retweetsCount": 3210,
+      "likeCount": 2160,
+      "user": {
+        "fullname": "Yang Parker",
+        "username": "jodi",
+        "avatarUrl": "https://source.unsplash.com/random?3",
+        "verified": true
+      }
+    },
+    {
+      "_id": "6019aac6f4d5e74111929018",
+      "text": "Proident commodo excepteur amet ex esse sit tempor proident pariatur deserunt fugiat laborum officia enim.",
+      "mediaImg": "https://source.unsplash.com/random?10",
+      "mediaTag": "SPARKS WHITFIELD",
+      "commentsCount": 40,
+      "retweetsCount": 2935,
+      "likeCount": 2262,
+      "user": {
+        "fullname": "Augusta Johns",
+        "username": "dudley",
+        "avatarUrl": "https://source.unsplash.com/random?1",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac6f45d846898b16055",
+      "text": "Ipsum non elit ex commodo cupidatat id.",
+      "mediaImg": "https://source.unsplash.com/random?8",
+      "mediaTag": "JERRY RANDALL",
+      "commentsCount": 33,
+      "retweetsCount": 4863,
+      "likeCount": 3884,
+      "user": {
+        "fullname": "Julianne Sanchez",
+        "username": "vanessa",
+        "avatarUrl": "https://source.unsplash.com/random?1",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac64196e922e4aa231e",
+      "text": "Incididunt ullamco nulla dolor pariatur non pariatur exercitation ullamco.",
+      "mediaImg": "https://source.unsplash.com/random?6",
+      "mediaTag": "STANTON PIERCE",
+      "commentsCount": 36,
+      "retweetsCount": 4425,
+      "likeCount": 2416,
+      "user": {
+        "fullname": "Olsen Gomez",
+        "username": "samantha",
+        "avatarUrl": "https://source.unsplash.com/random?2",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac631b96c5c809884fc",
+      "text": "Dolore anim commodo eiusmod labore aute ad esse.",
+      "mediaImg": "https://source.unsplash.com/random?8",
+      "mediaTag": "NEVA HOLMES",
+      "commentsCount": 32,
+      "retweetsCount": 3751,
+      "likeCount": 3468,
+      "user": {
+        "fullname": "Haney Albert",
+        "username": "clark",
+        "avatarUrl": "https://source.unsplash.com/random?5",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac6e36f5e6da5fca872",
+      "text": "Deserunt occaecat ad ex deserunt irure cupidatat fugiat velit voluptate adipisicing mollit nostrud.",
+      "mediaImg": "https://source.unsplash.com/random?6",
+      "mediaTag": "WELLS MADDEN",
+      "commentsCount": 38,
+      "retweetsCount": 3710,
+      "likeCount": 3093,
+      "user": {
+        "fullname": "Rosa Mendoza",
+        "username": "louise",
+        "avatarUrl": "https://source.unsplash.com/random?3",
+        "verified": false
+      }
+    },
+    {
+      "_id": "6019aac685af6e1e5aad449a",
+      "text": "Laboris labore sit laborum laboris duis aliquip.",
+      "mediaImg": "https://source.unsplash.com/random?10",
+      "mediaTag": "FRANCO KEY",
+      "commentsCount": 28,
+      "retweetsCount": 3439,
+      "likeCount": 3009,
+      "user": {
+        "fullname": "Elisabeth Marshall",
+        "username": "ladonna",
+        "avatarUrl": "https://source.unsplash.com/random?5",
+        "verified": true
+      }
+    },
+    {
+      "_id": "6019aac60f0514b7eeba68b3",
+      "text": "Anim ullamco occaecat commodo sint deserunt ad Lorem proident.",
+      "mediaImg": "https://source.unsplash.com/random?9",
+      "mediaTag": "HARDING PARSONS",
+      "commentsCount": 25,
+      "retweetsCount": 3493,
+      "likeCount": 2792,
+      "user": {
+        "fullname": "Tamera Vasquez",
+        "username": "daphne",
+        "avatarUrl": "https://source.unsplash.com/random?5",
+        "verified": true
+      }
+    }
+  ],
+  "topics": [
+    {
+      "_id": "dsds2323dsd",
+      "name": "Навального",
+      "tweetsCount": 32844
+    },
+    {
+      "_id": "dsds2323dsdsd",
+      "name": "Казахстан",
+      "tweetsCount": 984400
+    },
+    {
+      "_id": "dsds2323dsdsdad",
+      "name": "#UFC258",
+      "tweetsCount": 124553
+    },
+    {
+      "_id": "dsds2323dswwwd",
+      "name": "#OneForAll",
+      "tweetsCount": 571
+    }
+  ]
+}

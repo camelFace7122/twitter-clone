@@ -182,6 +182,10 @@ export const useHomeStyles = makeStyles({
         fontWeight: 800,
         fontSize: 19
     },
+    tweetPageTitle: {
+        display: 'flex',
+        alignItems: 'center'
+    },
     tweetForm: {
         display: 'flex',
         padding: '5px 15px 10px 15px'
@@ -329,6 +333,10 @@ export const useHomeStyles = makeStyles({
     feedBlock: {
         height: '100%',
     },
+    feedBlockLoadingProgress: {
+        marginTop: 55,
+        textAlign: 'center'
+    },
     feedTweet: {
         padding: '10px 15px 0',
         outline: 'none',
@@ -337,8 +345,13 @@ export const useHomeStyles = makeStyles({
         '&:hover': {
             backgroundColor: theme.palette.secondary.contrastText,
         },
-        display: 'flex',
+        
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
+    feedTweetInner: {
+        display: 'flex',
+        color: 'inherit',
+        textDecoration: 'none'
     },
     tweetAvatarWrapper: {
         marginRight: 10
@@ -553,6 +566,10 @@ export const useHomeStyles = makeStyles({
         '&:hover': {
             backgroundColor: 'rgba(0, 0, 0, 0.03)'    
         }
+    },
+    rightSidebarSectionItemInner: {
+        textDecoration: 'none',
+        color: 'inherit',
     },
     rightSidebarSectionItemBody: {
         display: 'flex',

@@ -15,8 +15,9 @@ type PropsType = {
 }
 
 const HomeRightSidebar: React.FC<PropsType> = ({ classes }) => {
+
     const commonClasses = useCommonStyles()
-    
+
     return (
         <div className={classes.rightSidebarWrapper}>
             <div className={classes.rightSidebar}>

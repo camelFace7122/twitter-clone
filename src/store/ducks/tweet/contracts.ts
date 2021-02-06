@@ -5,7 +5,7 @@ export enum LoadingState {
     NEVER = 'NEVER'
 }
 
-export interface Tweet {
+export interface FullTweet {
     _id: string
     text: string
     mediaImg?: string
@@ -21,7 +21,7 @@ export interface Tweet {
     }
 }
 
-export interface TweetsState {
-    items: Tweet[]
+export interface FullTweetState {
+    data?: FullTweet,
     loadingState: LoadingState
 }

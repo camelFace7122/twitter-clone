@@ -32,7 +32,7 @@ const HomeLeftSidebarMenu: React.FC<PropsType> = ({ classes }) => {
     return (
         <ul className={classes.leftSidebarMenu}>
             <li className={classes.leftSidebarMenuItem}>
-                <NavLink exact to='/' style={{outline: 'none'}}>
+                <NavLink exact to='/home' style={{outline: 'none'}}>
                     <IconButton className={classes.commonIconButtonStyle} color='primary'>
                         <TwitterIcon className={classes.leftSidebarMenuItemIcon} />
                     </IconButton>
