@@ -16,6 +16,8 @@ import CalendarOutlinedIcon from '@material-ui/icons/EventOutlined';
 import HomeTweetFormTextIndicator from './HomeTweetFormTextIndicator';
 
 import { HomeStylesType } from '../../../styles/HomeStyles';
+import { useDispatch } from 'react-redux';
+import { createNewTweet } from '../../../store/ducks/tweets/actionCreators';
 
 type PropsType = {
     classes: HomeStylesType
@@ -27,8 +29,10 @@ type PropsType = {
 const MAX_LENGTH = 280
 
 const HomeTweetForm: React.FC<PropsType> = ({classes, maxRows, rows = 0, isModal = false}) => {
-    let [touched, setTouched] = React.useState(false)
-    let [text, setText] = React.useState('')
+    const [touched, setTouched] = React.useState(false)
+    const [text, setText] = React.useState('')
+    
+    const dispatch = useDispatch()
 
     const textPercent = Math.floor((text.length * 100) / MAX_LENGTH)
 
@@ -43,6 +47,7 @@ const HomeTweetForm: React.FC<PropsType> = ({classes, maxRows, rows = 0, isModal
     }
 
     const handleTweetFormSubmit = (e: React.MouseEvent) => {
+        dispatch(createNewTweet(text))
         setText('')
     }
 

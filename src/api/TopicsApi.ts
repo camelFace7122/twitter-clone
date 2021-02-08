@@ -9,5 +9,6 @@ export const TopicsApi = {
         } catch (error) {
             console.error(error);
         }
-    }
+    },
+    
 }

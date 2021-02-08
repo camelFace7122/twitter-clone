@@ -1,11 +1,12 @@
 import axios, {AxiosResponse} from 'axios';
 import { FullTweetState } from '../store/ducks/tweet/contracts';
-import { TweetsState } from '../store/ducks/tweets/contracts';
+import { Tweet, TweetsState } from '../store/ducks/tweets/contracts';
 
 export const TweetsApi = {
     fetchTweets: async (): Promise<AxiosResponse<TweetsState['items']> | undefined> => {
         try {
-            const data = await axios.get('/tweets');
+            const data = await axios.get('/tweets?_sort=id&_order=desc');
+            console.log(data.data[1])
             return data.data
         } catch (error) {
             console.error(error);
@@ -17,6 +18,14 @@ export const TweetsApi = {
             return data.data
         } catch (error) {
             console.error(error);
+        }
+    },
+    createNewTweet: async (newTweet: Tweet): Promise<AxiosResponse<Tweet> | undefined> => {
+        try {
+            const data = await axios.post('/tweets', newTweet)
+            return data.data
+        } catch (error) {
+            console.log(error)
         }
     }
 }
