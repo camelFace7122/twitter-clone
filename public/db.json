@@ -161,38 +161,8 @@
       }
     },
     {
-      "id": 11,
-      "_id": "0.piin3r0bdp",
-      "text": "Сработай пожалуйста",
-      "mediaImg": "https://pbs.twimg.com/media/Esmp3ZjXcAIerim?format=jpg&name=large",
-      "commentsCount": 6,
-      "retweetsCount": 17,
-      "likeCount": 100,
-      "user": {
-        "fullname": "Proper No. Twelve",
-        "username": "ProperWhiskey",
-        "avatarUrl": "https://pbs.twimg.com/profile_images/1234132860807852034/YUqrfkq7_400x400.jpg",
-        "verified": true
-      }
-    },
-    {
-      "id": 12,
-      "_id": "0.x3ul1wlra9",
-      "text": "CTot",
-      "mediaImg": "https://pbs.twimg.com/media/Esmp3ZjXcAIerim?format=jpg&name=large",
-      "commentsCount": 6,
-      "retweetsCount": 17,
-      "likeCount": 100,
-      "user": {
-        "fullname": "Proper No. Twelve",
-        "username": "ProperWhiskey",
-        "avatarUrl": "https://pbs.twimg.com/profile_images/1234132860807852034/YUqrfkq7_400x400.jpg",
-        "verified": true
-      }
-    },
-    {
-      "_id": "0.exf2ivzsrlh",
-      "text": "asfasdasdasdas",
+      "_id": "0.kfdnwlx6mub",
+      "text": "Nothing like a Proper Irish Coffee any day of the week #IrishCoffeeDay #OneForAll \n\n2 parts Proper No. Twelve Irish Whiskey\n4 parts Hot Coffee\n3/4 part Simple Syrup\n2-3 parts Heavy Cream\n\nCombine Proper Twelve, Coffee and Simple Syrup in Mug. Top with whipped heavy cream.",
       "mediaImg": "https://pbs.twimg.com/media/Esmp3ZjXcAIerim?format=jpg&name=large",
       "commentsCount": 6,
       "retweetsCount": 17,
@@ -203,7 +173,7 @@
         "avatarUrl": "https://pbs.twimg.com/profile_images/1234132860807852034/YUqrfkq7_400x400.jpg",
         "verified": true
       },
-      "id": 13
+      "id": 11
     }
   ],
   "topics": [

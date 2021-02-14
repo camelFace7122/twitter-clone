@@ -11,3 +11,5 @@ export const selectTweetsLoadingState = createSelector(selectTweetsState, (tweet
 export const selectTweetsIsLoading = createSelector(selectTweetsState, (tweetsState) => tweetsState.loadingState === LoadingState.LOADING)
 
 export const selectNewTweetIsLoading = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === NewTweetLoadingState.LOADING)
+
+export const selectNewTweetIsError = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === NewTweetLoadingState.ERROR)

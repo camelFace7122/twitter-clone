@@ -54,7 +54,7 @@ const HomeFeed: React.FC<PropsType> = ({ classes }) => {
                         {   
                             tweetsIsLoading ? <div className={classes.feedBlockLoadingProgress}><CircularProgress size={60} /></div> :
                             tweetsItems.map(tweet => {
-                                return <HomeTweet key={tweet._id} classes={classes} tweet={tweet} />
+                                return tweet && <HomeTweet key={tweet._id} classes={classes} tweet={tweet} />
                             })
                         }
                     </Route>    

@@ -304,7 +304,7 @@ export const useHomeStyles = makeStyles({
     tweetFormMainProgressIsFull: {
         color: colors.red.main
     },
-    tweetFromMainProgressWarning: {
+    tweetFormMainProgressWarning: {
         color: colors.yellow.main
     },
     tweetFormTextIndicatorLabel: {
@@ -322,6 +322,11 @@ export const useHomeStyles = makeStyles({
         '&:hover': {
             backgroundColor: theme.palette.primary.dark,
         }
+    },
+    tweetFormError: {
+        marginTop: 10,
+        paddingTop: 0,
+        paddingBottom: 0,
     },
     feedHeaderDivider: {
       width: '100%',
@@ -378,15 +383,19 @@ export const useHomeStyles = makeStyles({
     },
     tweetHeaderOfficialStatus: {
         fontSize: 20,
-        marginLeft: 2
+        marginLeft: 2,
+        marginRight: 5,
     },
     tweetHeaderUsername: {
-        marginLeft: 5
+        color: theme.palette.secondary.dark
+ 
     },
     tweetHeaderTimeFromPublish: {},
     tweetHeaderMoreButtonWrapper: {},
     tweetContent: {},
-    tweetTextContent: {},
+    tweetTextContent: {
+        wordBreak: 'break-word'
+    },
     tweetMediaContent: {},
     tweetMediaImgWrapper: {
         marginTop: 10,
@@ -409,7 +418,7 @@ export const useHomeStyles = makeStyles({
         marginTop: 5
     },
     tweetMediaTagLink: {
-        fontSize: 13,
+        fontSize: '15px !important',
         color: theme.palette.secondary.dark,
         textDecoration: 'none',
         '&:hover': {
@@ -721,6 +730,61 @@ export const useHomeStyles = makeStyles({
         padding: '0 15px',
         backgroundColor: theme.palette.primary.contrastText,
     },
+    fullTweet: {
+        padding: '10px 15px 0'
+    },
+    fullTweetHeader: {
+        marginBottom: -3,
+    },
+    fullTweetAbout: {
+        display: 'flex',
+        marginBottom: 5
+    },
+    fullTweetTextContent: {
+        '& span': {
+            fontSize: 23,
+            wordBreak: 'break-word'
+        }
+    },
+    fullTweetStatistics: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        margin: '0 auto',
+        maxWidth: 450,
+        minHeight: '3.2rem',
+    },
+    fullTweetInfoIcon: {
+        fontSize: 24
+    },
+    fullTweetMetaData: {
+        margin: '15px 0',
+        color: theme.palette.secondary.dark,
+    },
+    fullTweetActuality: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '15px 5px',
+        borderTop: `1px solid ${theme.palette.secondary.light}`,
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
+    fullTweetActualityLink: {
+        display: 'inline-block',
+        textDecoration: 'none',
+        color: theme.palette.secondary.dark,
+        boxSizing: 'border-box',
+        '& + &': {
+            marginLeft: 20
+        },
+        '& span': {
+            fontWeight: 700,
+            color: 'initial'
+        },
+        '&:hover': {
+            textDecoration: 'underline',
+            textDecorationColor: colors.black.main
+        }
+    }
 })
 
 export type HomeStylesType = ReturnType<typeof useHomeStyles>

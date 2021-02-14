@@ -13,14 +13,15 @@ type PropsType = {
     Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>
     infoName?: string
     infoText?: string,
-    withoutText? : boolean
+    withoutText? : boolean,
+    fullTweet?: boolean 
 }
 
-const HomeTweetInfo: React.FC<PropsType> = ({ classes, Icon, infoName, infoText, withoutText }) => {
+const HomeTweetInfo: React.FC<PropsType> = ({ classes, Icon, infoName, infoText, withoutText, fullTweet }) => {
     return (
         <div className={classes.tweetInfo}>
             <IconButton className={cn(classes.tweetInfoIconButton, {[`${classes.tweetInfoRetweetButton}`]: infoName === 'retweet', [`${classes.tweetInfoLikeButton}`]: infoName === 'like'} )}>
-                <Icon className={classes.tweetInfoIcon} />
+                <Icon className={cn(classes.tweetInfoIcon, { [`${classes.fullTweetInfoIcon}`]: fullTweet })} />
             </IconButton>
             { !withoutText && <Typography className={classes.tweetInfoText}>{infoText || ''}</Typography> }
             

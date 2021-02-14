@@ -18,7 +18,7 @@ const HomeTweetFormTextIndicator: React.FC<PropsType> = ({ classes, textPercent,
                 className={cn(classes.tweetFormGreyProgress, { [`${classes.tweetFormTransparentProgress}`]: textRemained <= -10 })} />
             <CircularProgress variant='static' value={textPercent >= 100 ? 100 : textPercent} size={20}
                 className={cn(classes.tweetFormMainProgress, { [`${classes.tweetFormMainProgressIsFull}`]: textPercent >= 100 },
-                    { [`${classes.tweetFromMainProgressWarning}`]: textRemained <= 20 && textRemained > 0 },
+                    { [`${classes.tweetFormMainProgressWarning}`]: textRemained <= 20 && textRemained > 0 },
                     { [`${classes.tweetFormTransparentProgress}`]: textRemained <= -10 })} />
             {
                 textRemained <= 20 &&

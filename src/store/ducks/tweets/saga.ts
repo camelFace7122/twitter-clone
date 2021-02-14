@@ -32,6 +32,7 @@ function* createNewTweetRequest({payload: text}: CreateNewTweetActionInterface) 
         yield put(setNewTweet(data))
 
     } catch (error) {
+        console.log('Oshibka')
         yield put(setNewTweetLoadingState(NewTweetLoadingState.ERROR))
     }
 }

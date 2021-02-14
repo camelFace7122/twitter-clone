@@ -10,6 +10,7 @@ export const TweetsApi = {
             return data.data
         } catch (error) {
             console.error(error);
+            throw new Error(error)
         }
     },
     fetchFullTweet: async (id: string): Promise<AxiosResponse<FullTweetState['data']> | undefined> => {
@@ -18,6 +19,7 @@ export const TweetsApi = {
             return data.data
         } catch (error) {
             console.error(error);
+            throw new Error(error)
         }
     },
     createNewTweet: async (newTweet: Tweet): Promise<AxiosResponse<Tweet> | undefined> => {
@@ -25,7 +27,8 @@ export const TweetsApi = {
             const data = await axios.post('/tweets', newTweet)
             return data.data
         } catch (error) {
-            console.log(error)
+            console.error(error)
+            throw new Error(error)
         }
     }
 }
