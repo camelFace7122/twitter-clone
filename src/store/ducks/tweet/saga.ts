@@ -1,12 +1,12 @@
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { TweetsApi } from '../../../api/TweetsApi'
+import { LoadingState } from '../../types'
 import { FullTweetActionsTypes, setFullTweetLoadingState, setFullTweet, FetchFullTweetActionInterface } from './actionCreators'
-import { LoadingState } from './contracts'
 
 function* fetchFullTweetRequest({ payload: tweetId }: FetchFullTweetActionInterface ) {
     try {
         const data = yield call(TweetsApi.fetchFullTweet, tweetId)
-        yield put(setFullTweet(data[0]))
+        yield put(setFullTweet(data))
     } catch (error) {
         yield put(setFullTweetLoadingState(LoadingState.ERROR))
     }

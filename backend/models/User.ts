@@ -3,16 +3,17 @@ import bcrypt from 'bcrypt'
 import { config } from '../config'
 
 interface IUser {
-    email: string,
-    fullname: string,
-    username: string,
-    password: string,
-    confirmHash: string,
-    confirmed?: boolean,
+    _id?: string
+    email: string
+    fullname: string
+    username: string
+    password: string
+    confirmHash: string
+    confirmed?: boolean
     isValidPassword: (password: IUser['password']) => Promise<boolean>
 }
 
-type UserSchema = IUser & Document
+export type UserSchema = IUser & Document
 
 const userSchema = new Schema<UserSchema>({
     email: {

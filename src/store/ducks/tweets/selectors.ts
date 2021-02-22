@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { State } from "../../store"
-import { LoadingState, NewTweetLoadingState } from './contracts'
+import { LoadingState } from '../../types'
 
 const selectTweetsState = (state: State) => state.tweets
 
@@ -10,6 +10,6 @@ export const selectTweetsLoadingState = createSelector(selectTweetsState, (tweet
 
 export const selectTweetsIsLoading = createSelector(selectTweetsState, (tweetsState) => tweetsState.loadingState === LoadingState.LOADING)
 
-export const selectNewTweetIsLoading = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === NewTweetLoadingState.LOADING)
+export const selectNewTweetIsLoading = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === LoadingState.LOADING)
 
-export const selectNewTweetIsError = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === NewTweetLoadingState.ERROR)
+export const selectNewTweetIsError = createSelector(selectTweetsState, (tweetsState) => tweetsState.newTweetLoadingState === LoadingState.ERROR)

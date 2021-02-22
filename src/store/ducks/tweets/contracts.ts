@@ -1,15 +1,4 @@
-export enum LoadingState {
-    LOADED = 'LOADED',
-    LOADING = 'LOADING',
-    ERROR = 'ERROR',
-    NEVER = 'NEVER'
-}
-
-export enum NewTweetLoadingState {
-    LOADING = 'LOADING',
-    ERROR = 'ERROR',
-    NEVER = 'NEVER'
-}
+import { LoadingState } from "../../types";
 
 export interface Tweet {
     _id: string
@@ -19,6 +8,9 @@ export interface Tweet {
     commentsCount?: number
     retweetsCount?: number
     likeCount?: number
+    createdAt: Date
+    updatedAt: Date
+    userPlatform: string
     user: {
         fullname: string
         username: string
@@ -30,5 +22,5 @@ export interface Tweet {
 export interface TweetsState {
     items: Tweet[]
     loadingState: LoadingState
-    newTweetLoadingState: NewTweetLoadingState
+    newTweetLoadingState: LoadingState
 }

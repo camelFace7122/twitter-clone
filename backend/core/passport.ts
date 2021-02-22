@@ -15,8 +15,6 @@ passport.use(new LocalStrategy(
 
             const validate = await user.isValidPassword(password)
 
-            console.log(validate)
-
             if (!validate) {
                 return done(null, false)
             }
@@ -35,8 +33,12 @@ passport.use(
       secretOrKey: config.SESSION_SECRET,
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
     },
-    async (token, done) => {
+    async (token, done) => {    
       try {
+        const user = await User.findOne({_id: token.user._id})
+        if (!user) {
+          throw new Error('User was not found')
+        }
         return done(null, token.user);
       } catch (error) {
         done(error);

@@ -1,4 +1,4 @@
-import { User } from '../models/User'
+import { User, UserSchema } from '../models/User'
 import { Request, ICreateUserReqBody } from './contracts'
 import { NextFunction, Response } from 'express'
 import { validationResult } from 'express-validator'
@@ -7,11 +7,12 @@ import { config } from '../config'
 import { transport } from '../core/transport'
 import mongoose from 'mongoose'
 import jwt from 'jsonwebtoken'
+import { md5 } from '../utils/md5'
 
 class UserController {
     async index(_: Request, res: Response) {
         try {
-            const users = User.find({}).exec()
+            const users = await User.find({}).exec()
 
             res.json({
                 status: 'success',
@@ -24,6 +25,7 @@ class UserController {
             })
         }
     }
+    
     async create(req: Request<ICreateUserReqBody>, res: Response) {
         try {
             const errors = validationResult(req);
@@ -52,7 +54,7 @@ class UserController {
             })
 
             const password = await generateHash(req.body.password)
-            const confirmHash = await generateHash(req.body.email)
+            const confirmHash = await md5(req.body.email)
 
             const data: ICreateUserReqBody = {
                 email: req.body.email,
@@ -157,7 +159,7 @@ class UserController {
 
     async login(req: Request, res: Response, next: NextFunction) {
         try {
-            const user = req.user
+            const user = req.user as UserSchema
             
             if (!user) {
                 res.status(400).json({
@@ -166,13 +168,23 @@ class UserController {
                 })
                 throw new Error('Неверное имя пользователя/e-mail или пароль')
             }
+
+            if (!user.confirmed) {
+                res.status(423).json({
+                    status: 'error',
+                    message: 'Необходимо подтвердить регистрацию в указанной при регистрации почте'
+                })    
+            }
+
             req.login(
                 user,
                 { session: false },
                 async (error) => {
                   if (error) return next(error);
     
-                  const token = jwt.sign({ user }, config.SESSION_SECRET);
+                  const token = jwt.sign({ user }, config.SESSION_SECRET, {
+                    expiresIn: '30d'
+                  });
     
                   return res.status(200).json({
                     status: 'success',

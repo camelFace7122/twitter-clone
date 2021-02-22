@@ -1,9 +1,4 @@
-export enum LoadingState {
-    LOADED = 'LOADED',
-    LOADING = 'LOADING',
-    ERROR = 'ERROR',
-    NEVER = 'NEVER'
-}
+import { LoadingState } from "../../types";
 
 export interface FullTweet {
     _id: string
@@ -13,6 +8,9 @@ export interface FullTweet {
     commentsCount?: number
     retweetsCount?: number
     likeCount?: number
+    createdAt: Date
+    updatedAt: Date
+    userPlatform: string
     user: {
         fullname: string
         username: string

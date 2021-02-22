@@ -1,12 +1,12 @@
 import { Action } from "redux"
-import { NewTweetLoadingState, Tweet, TweetsState } from "./contracts"
+import { LoadingState } from "../../types"
+import { TweetsState } from "./contracts"
 
 export enum TweetsActionsTypes {
     SET_TWEETS = 'tweets/SET_TWEETS',
     FETCH_TWEETS = 'tweets/FETCH_TWEETS',
     SET_TWEETS_LOADING_STATE = 'tweets/SET_TWEETS_LOADING_STATE',
     CREATE_NEW_TWEET = 'tweets/CREATE_NEW_TWEET',
-    SET_NEW_TWEET = 'tweets/SET_NEW_TWEET',
     SET_NEW_TWEET_LOADING_STATE = 'tweets/SET_NEW_TWEET_LOADING_STATE'
 }
 
@@ -27,11 +27,6 @@ interface SetTweetsLoadingStateActionInterface extends Action<TweetsActionsTypes
 export interface CreateNewTweetActionInterface extends Action<TweetsActionsTypes> {
     type: TweetsActionsTypes.CREATE_NEW_TWEET,
     payload: string
-}
-
-interface SetNewTweetActionInterface extends Action<TweetsActionsTypes> {
-    type: TweetsActionsTypes.SET_NEW_TWEET,
-    payload: Tweet
 }
 
 interface SetNewTweetLoadingStateActionInterface extends Action<TweetsActionsTypes> {
@@ -66,14 +61,7 @@ export const createNewTweet = (payload: string): CreateNewTweetActionInterface =
     }
 }
 
-export const setNewTweet = (payload: Tweet): SetNewTweetActionInterface => {
-    return {
-        type: TweetsActionsTypes.SET_NEW_TWEET,
-        payload,
-    }
-}
-
-export const setNewTweetLoadingState = (payload: NewTweetLoadingState): SetNewTweetLoadingStateActionInterface => {
+export const setNewTweetLoadingState = (payload: LoadingState): SetNewTweetLoadingStateActionInterface => {
     return {
         type: TweetsActionsTypes.SET_NEW_TWEET_LOADING_STATE,
         payload,
@@ -82,4 +70,4 @@ export const setNewTweetLoadingState = (payload: NewTweetLoadingState): SetNewTw
 
 export type TweetsActions = SetTweetsActionInterface | FetchTweetsActionInterface 
                             | SetTweetsLoadingStateActionInterface | CreateNewTweetActionInterface
-                            | SetNewTweetActionInterface | SetNewTweetLoadingStateActionInterface
+                            | SetNewTweetLoadingStateActionInterface

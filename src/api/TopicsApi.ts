@@ -10,5 +10,4 @@ export const TopicsApi = {
             console.error(error);
         }
     },
-    
 }

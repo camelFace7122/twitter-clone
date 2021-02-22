@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect'
 import { State } from "../../store"
-import { LoadingState } from './contracts'
+import { LoadingState } from '../../types'
 
 const selectFullTweetState = (state: State) => state.fullTweet
 

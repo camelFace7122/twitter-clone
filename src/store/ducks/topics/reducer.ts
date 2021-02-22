@@ -1,6 +1,7 @@
 import produce, { Draft } from 'immer';
+import { LoadingState } from '../../types';
 import { TopicsActions, TopicsActionsTypes } from './actionCreators';
-import { TopicsState, LoadingState } from './contracts';
+import { TopicsState } from './contracts';
 
 const initialTopicsState: TopicsState = {
     items: [],
@@ -18,7 +19,7 @@ export const topicsReducer = produce((draft: Draft<TopicsState>, action: TopicsA
             break;
         case TopicsActionsTypes.FETCH_TOPICS:
             draft.items = []
-            draft.loadingState = LoadingState.LOADING
+            // draft.loadingState = LoadingState.LOADING
             break;
     }   
 }, initialTopicsState)

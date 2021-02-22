@@ -12,6 +12,9 @@ interface Config {
     NODEMAILER_EMAIL?: string
     NODEMAILER_PASS?: string
     SALT_ROUNDS: number
+    CLOUDINARY_API_NAME?: string
+    CLOUDINARY_API_KEY?: string
+    CLOUDINARY_API_SECRET?: string
 }
 
 export const config: Config = {
@@ -21,5 +24,8 @@ export const config: Config = {
     SESSION_SECRET: process.env.SESSION_SECRET || Math.random().toString(36).substr(2),
     NODEMAILER_EMAIL: process.env.NODEMAILER_EMAIL,
     NODEMAILER_PASS: process.env.NODEMAILER_PASS,
-    SALT_ROUNDS: process.env.SALT_ROUNDS && Number(process.env.SALT_ROUNDS) || 10
+    SALT_ROUNDS: process.env.SALT_ROUNDS && Number(process.env.SALT_ROUNDS) || 10,
+    CLOUDINARY_API_NAME: process.env.CLOUDINARY_API_NAME,
+    CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET
 }

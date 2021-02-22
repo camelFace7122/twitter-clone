@@ -16,10 +16,11 @@ import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
 
 import { HomeStylesType } from '../../../styles/HomeStyles';
 
-import { selectFullTweetData, selectFullTweetIsLoading } from './../../../store/ducks/tweet/selectors'
+import { selectFullTweetData, selectFullTweetIsLoading } from './../../../store/ducks/tweet/selectors';
 import { fetchFullTweet, setFullTweet } from '../../../store/ducks/tweet/actionCreators';
 import HomeTweetInfo from './HomeTweetInfo';
 import { useCountForDisplay } from '../../../hooks/useCountForDisplay';
+import { formatDate } from '../../../utils/dateHelpers';
 
 type PropsType = {
     classes: HomeStylesType
@@ -79,11 +80,14 @@ const FullTweet: React.FC<PropsType> = ({ classes }) => {
                             {tweet.text}
                         </span>
                         <div className={classes.tweetMediaContent}>
-                            <div className={classes.tweetMediaImgWrapper}>
-                                <span className={classes.tweetMediaImgLink}>
-                                    <img src={tweet.mediaImg} alt="Tweet" />
-                                </span>
-                            </div>
+                                {
+                                    tweet.mediaImg &&
+                                    <div className={classes.tweetMediaImgWrapper}>
+                                        <span className={classes.tweetMediaImgLink}>
+                                            <img src={tweet.mediaImg} alt="Tweet" />
+                                        </span>
+                                    </div>
+                                }
                             <div className={classes.tweetMediaTags}>
                                 <span className={classes.tweetMediaTagLink}>
                                     {tweet.mediaTag}
@@ -93,11 +97,11 @@ const FullTweet: React.FC<PropsType> = ({ classes }) => {
                     </div>
                 </div>
                 <div className={classes.fullTweetMetaData}>
-                    <span>1:20 AM</span>
+                    <span>{formatDate(tweet.createdAt, 'H:mm')}</span>
                     <span style={{ padding: '0 5px' }}>·</span>
-                    <span>26 янв. 2021 г.</span>
+                    <span>{formatDate(tweet.createdAt, 'd MMM y г.')}</span>
                     <span style={{ padding: '0 5px' }}>·</span>
-                    <span>Twitter for iPhone</span>
+                    <span>{tweet.userPlatform}</span>
                 </div>
                 <div className={classes.fullTweetActuality}>
                     <a href="/" className={classes.fullTweetActualityLink}>

@@ -383,15 +383,29 @@ export const useHomeStyles = makeStyles({
     },
     tweetHeaderOfficialStatus: {
         fontSize: 20,
-        marginLeft: 2,
-        marginRight: 5,
+        marginLeft: 2
     },
     tweetHeaderUsername: {
-        color: theme.palette.secondary.dark
- 
+        color: theme.palette.secondary.dark,
+        marginLeft: 5
     },
     tweetHeaderTimeFromPublish: {},
     tweetHeaderMoreButtonWrapper: {},
+    tweetSettingsMenu: {
+        '& .MuiPaper-root': {
+            boxShadow: 'rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px',
+            borderRadius: 4,
+            backgroundColor: theme.palette.primary.contrastText,
+        },
+        '& .MuiList-root': {
+            width: 295,
+            padding: 0,
+        }
+    },
+    tweetSettingsMenuListItem: {
+        padding: 15,
+        lineHeight: 1
+    },
     tweetContent: {},
     tweetTextContent: {
         wordBreak: 'break-word'
